@@ -174,6 +174,9 @@ section + section { border-top: 1px solid color-mix(in srgb, var(--line) 55%, tr
 
 footer { padding-block: 28px calc(28px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
 footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; align-items: center; }
+  .belt .beltlang{margin:.4rem 0 1rem;padding-inline-start:1.2rem;line-height:1.8}
+  .belt .beltlang li{margin:.35rem 0}
+  .belt h3{margin-top:1.4rem}
 </style>
 </head>
 <body>
@@ -251,6 +254,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: 
         <div class="item"><span class="ic warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/><circle cx="12" cy="12" r="3"/></svg></span><div><h3>العوائق والعمق</h3><p>يقدّر المسافة إلى ما أمامك، ويميّز الجسم القريب، والعائق على مستوى الرأس، والدرج النازل أو الحفرة.</p></div></div>
         <div class="item"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span><div><h3>محرك اكتشاف قوي</h3><p>يحلل البيئة أمامك بأقل زمن ممكن وبأكبر عدد من الإطارات في الثانية، على الهاتف نفسه، فيصلك التوجيه في لحظته.</p></div></div>
         <div class="item"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 12h3l3-7 4 14 3-7h5"/></svg></span><div><h3>ثابت مع اهتزاز الجري</h3><p>يعوّض ميلان الهاتف واهتزاز خطواتك، ولا يبدّل يمينًا ويسارًا في أقل من ثانية، فلا تتقافز الإشارات.</p></div></div>
+        <div class="item"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V8h12"/><path d="m14 5 3 3-3 3"/></svg></span><div><h3>زوايا الملاعب بثقة</h3><p>يكتشف الزاوية القائمة قبل وصولها، فيقول لك «استعد» ثم «انعطف الآن» مرة واحدة، ويميّز منحنى المضمار من الزاوية، ولا يوقفك لمجرد منعطف.</p></div></div>
         <div class="item"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 18c4 0 4-12 8-12s4 12 8 12"/></svg></span><div><h3>يوجّهك بدل أن يوقفك</h3><p>إذا انسدّ الطريق وكان جانب مفتوحًا بوضوح، يقودك إليه. التوقف للحالات الحرجة فقط، ولا يوقفك شخص يمشي أمامك بسرعتك.</p></div></div>
       </div>
     </div>
@@ -327,6 +331,14 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: 
           <code id="mail">yousefgattal75@gmail.com</code>
           <button class="feel" id="copy" type="button">نسخ</button>
         </div>
+        <h3>لغة الحزام: خمسة محركات حول الخصر</h3>
+        <ul class="beltlang">
+          <li><b>مكان الاهتزاز هو الاتجاه:</b> محركات اليسار تعني يساراً، ومحركات اليمين يميناً، والوسط أمامك. كلما ابتعد المحرك إلى الجانب كان التصحيح أكبر.</li>
+          <li><b>طريقته نوع الرسالة:</b> نبضة قصيرة للتصحيح، وحركة ناعمة عبر الحزام لمنحنى قادم، وثلاث نبضات في الوسط لعائق، والمحركات الخمسة معاً للتوقف فقط.</li>
+          <li><b>السكون يعني أنك على المسار.</b> مهلة بين الإشارات تختارها أنت، والتحذيرات لا تنتظرها أبداً.</li>
+        </ul>
+        <h3>الاتصال من التطبيق</h3>
+        <p class="muted">من الإعدادات، اختر «حزام الاهتزاز: الاتصال والتدريب» ثم «ابحث عن الحزام واتصل». هناك تفحص كل محرك في مكانه، وتتعلّم كل إشارة، وتضبط القوة والمهلة، ثم تجتاز اختبار التعرّف. إذا انقطع الحزام يعود الاهتزاز إلى الهاتف تلقائياً.</p>
       </div>
       <figure><img src="belt.webp" alt="حزام بصير ران للاهتزاز: حزام أسود حول الخصر عليه وحدات اهتزاز ووحدة تحكم في الأمام" width="1000" height="538"></figure>
     </div>
@@ -348,6 +360,8 @@ const PATTERNS = [
   { name: 'صحّح بقوة يساراً', hint: 'نبضة قوية أطول', p: [240], cls: '' },
   { name: 'منعطف يسار قادم', hint: 'نبضة طويلة هادئة', p: [400], cls: 'soft' },
   { name: 'منعطف يمين قادم', hint: 'نبضتان طويلتان هادئتان', p: [400, 220, 400], cls: 'soft' },
+  { name: 'زاوية قادمة: استعد للانعطاف يساراً', hint: 'نبضة تتصاعد من خفيفة إلى قوية (اليمين: نبضتان)', p: [560], cls: 'soft' },
+  { name: 'انعطف الآن يساراً', hint: 'قصيرة ثم طويلة (اليمين: مرتين)', p: [90, 110, 600], cls: '' },
   { name: 'الطريق غير واضح، خفّف السرعة', hint: 'نبضتان طويلتان خفيفتان بطيئتان', p: [300, 300, 300], cls: 'soft' },
   { name: 'عائق، تجاوزه من اليسار', hint: 'ثلاث سريعة ثم نبضة', p: [120, 80, 120, 80, 120, 400, 150], cls: 'amber' },
   { name: 'عائق، تجاوزه من اليمين', hint: 'ثلاث سريعة ثم نبضتان', p: [120, 80, 120, 80, 120, 400, 150, 150, 150], cls: 'amber' },
